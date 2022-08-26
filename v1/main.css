@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+header{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(Images/baner.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: right top;
+	font-family: 'Roboto Mono', monospace;
+}
+
+.MainTitle{
+	text-align: center;
+	font-size: 4em;
+	text-shadow: 0px 0px 30px white;
+	animation: anim .5s .6s ease-out forwards;
+	letter-spacing: 5px;
+}
+
+@keyframes anim {
+	100%{
+		letter-spacing: 0px;
+	}
+}
+
+.SubTitle{
+	text-shadow: 0px 0px 20px white;
+	font-size: 2em;
+	letter-spacing: 3px;
+	text-align: center;
+	margin-top: 5px;
+}
+
+main{
+	width: 75%;
+	margin: 10px auto;
+}
+
+.IntroText .Stro{
+	margin: 10px 0px;
+	font-weight: bold;
+	font-size: 1.8em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.IntroText .MainText {
+	font-size: 1.4em;
+}
+
+.History{
+	padding: 105px 0px;
+}
+
+.Main{
+	margin: 0px auto;
+	text-align: center;
+	font-size: 4em;
+	margin-bottom: 60px;
+	max-width: 720px;
+	border-bottom: 3px solid darkgreen;
+}
+
+.WidthE{
+	max-width: 720px;
+}
+
+.content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.Text{
+	margin-left: 50px;
+}
+
+.HistoryTitle{
+	font-size: 2.7em;
+	margin-bottom: .3em;
+}
+
+.TextContent{
+	font-size: 1.45em;
+}
+
+.TextContentQ{
+	margin-top: 65px;
+	font-size: 2.35em;
+}
+
+.HistoryImage{
+	align-self: flex-start;
+	margin-top: 30px;
+}
+
+.img{
+	align-self: flex-start;
+}
+
+.Map{
+	margin: 0px auto;
+	width: calc(100% - 140px);
+	height: 570px;
+}
+
+iframe{
+	height: 100%;
+	width: 100%;
+}
+
+footer{
+	padding: 25px 0px;
+	background-color: gray;
+	text-align: center;
+}
+
+a{
+	margin: 0px 20px;
+	font-size: 2em;
+	transition: transform .8s;
+}
+
+i{
+	transition: transform .3s;
+}
+
+i:nth-child(2){
+	color: red;
+}
+
+i:hover{
+	transform: translateY(-5px);
+}
+
+@media (max-width: 760px){
+	main{
+		width: 85%;
+		margin: 10px auto;
+	}
+	.Map{
+		width: calc(100% - 50px);
+		height: 380px;
+	}
+	.content{
+		display: block;
+	}
+	.MainTitle{
+		font-size: 2.8em;
+	}
+	.SubTitle{
+		letter-spacing: 0px;
+		font-size: 1em;
+	}
+	.Main{
+		font-size: 2.2em;
+		max-width: 300px;
+	}
+	.img{
+		margin: 0px auto;
+		width: 70%;
+		height: 300px;
+	}
+	.HistoryImage{
+		margin: 0;
+		height: 100%;
+		width: 100%;
+	}
+	.Text{
+		margin: 15px 0px;
+		text-align: center;
+	}
+	.HistoryTitle{
+		font-size: 1.8em;
+	}
+	.TextContent{
+		font-size: 1.2em;
+	}
+	.TextContentQ{
+		font-size: 1.5em;
+	}
+}
+
+@media (max-width: 650px){
+	main{
+		width: 100%;
+	}
+	.img{
+		margin: 0px auto;
+		width: 70%;
+		height: 230px;
+	}
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/etc.css">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://kit.fontawesome.com/4176cc1513.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Clebersson Sites</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <p class="animate__animated hvr-sweep-to-top"><a href="#sobre">Sobre</a></p>
+            <p class="animate__animated hvr-sweep-to-top"><a href="#contato">Contato</a></p>
+        </nav>
+        <div class="hd">
+            <h1 class="animate__animated" id="animate__fadeInDown">Clebersson Sites</h1>
+            <p class="animate__animated">Sites lindos a um preço acessível</p>
+        </div>
+    </header>
+    <main>
+        <section class="sobre" id="sobre">
+            <h1 class="title animate__animated" style="width: 6ch;">Sobre</h1>
+            <div class="content">
+                <div class="img">
+                    <img src="./src/Nerd-46422.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h2 class="animate__animated" id="animate__fadeInUp">Clebersson, 25</h2>
+                    <p class="animate__animated" id="animate__fadeInUp">Não tenho nehuma formação, dediquei minha vida até pouco tempo ao Youtube como produtor de conteudo, porém não obtive sucesso. Nesse tempo observei que o conteudo de tutoriais sobre infomática em português eram em sua maioria maçantes e de baixa qualidade. Logo percebi que poderia ganhar dinheiro com isso, "Fazendo o que os outros poderiam fazer sozinhos". Hoje tenho certificado na área de HTML, CSS e recentemente comprei uma certificação em Javascript.</p>
+                </div>
+            </div>
+        </section>
+        <section class="qualidade">
+            <h1 class="title animate__animated" style="width: 10ch;">Qualidade</h1>
+            <p class="animate__animated" id="animate__slideInLeft">Clientes 100% satisfeitos.*</p>
+            <p class="animate__animated" id="animate__slideInLeft">Melhor custo benefício da região.*</p>
+            <p class="animate__animated" id="animate__slideInLeft">Atendimento no Brasil e no exterior.*</p>
+            <p class="animate__animated" id="animate__slideInLeft">Sites entregues sempre dentro do prazo.*</p>
+            <h6>Estatísticas feitas a partir do total de clientes, que corresponde à 0.</h6>
+        </section>
+        <section class="loc">
+            <h1 class="title animate__animated" style="width: 12ch;">Onde Estou</h1>
+			<div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2866.17321581666!2d-71.48929437710775!3d-9.245265125452464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1604095529801!5m2!1spt-BR!2sbr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+        </section>
+    </main>
+    <footer id="contato">
+        <a href=""><i class="fab fa-facebook-square"></i></a>
+        <a href=""><i class="fab fa-discord"></i></a>
+        <a href=""><i class="fab fa-github"></i></a>
+    </footer>
+    <script>
+        const p = document.querySelectorAll('p');
+        const other = [
+            ...document.querySelectorAll('h1'), 
+            ...document.querySelectorAll('h2'),
+            ...document.querySelectorAll('i')
+        ]
+
+        function checkPosition() {
+            for (const x of p) {
+                let positionFromTop = x.getBoundingClientRect().top;
+
+                if (positionFromTop - window.innerHeight <= 0) {
+                    if (x.id) x.classList.add(x.id);
+                    else x.classList.add("animate__fadeIn");
+                }
+            }
+            for (const x of other) {
+                let positionFromTop = x.getBoundingClientRect().top;
+
+                if (positionFromTop - window.innerHeight <= 0) {
+                    if (x.id) x.classList.add(x.id);
+                    else x.classList.add("animate__zoomIn");
+                }
+            }
+        }
+
+        window.addEventListener('scroll', checkPosition);
+
+        window.onload = checkPosition();
+    </script>
+</body>
+</html>
